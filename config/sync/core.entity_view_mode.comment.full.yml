@@ -1,0 +1,12 @@
+uuid: f9f7e402-24f6-4d69-98cf-b07aa078fae5
+langcode: de
+status: false
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: K7eNlfU7NEUajz01wItywZklr2oaPgL6s1_97fmDXLA
+id: comment.full
+label: 'Kompletter Kommentar'
+targetEntityType: comment
+cache: true
