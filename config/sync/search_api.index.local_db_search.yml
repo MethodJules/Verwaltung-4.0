@@ -1,0 +1,152 @@
+uuid: 2231e905-e6ec-4d99-9d0c-012d9bec2589
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - search_api.server.default_server
+  module:
+    - user
+    - node
+    - search_api
+id: local_db_search
+name: 'local db search'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  mail:
+    label: E-Mail
+    datasource_id: 'entity:user'
+    property_path: mail
+    type: text
+    dependencies:
+      module:
+        - user
+  name:
+    label: Name
+    datasource_id: 'entity:user'
+    property_path: name
+    type: text
+    dependencies:
+      module:
+        - user
+  name_1:
+    label: Name
+    datasource_id: 'entity:user'
+    property_path: name
+    type: string
+    dependencies:
+      module:
+        - user
+  name_2:
+    label: Name
+    datasource_id: 'entity:user'
+    property_path: name
+    type: text
+    dependencies:
+      module:
+        - user
+  rendered_item:
+    label: 'Gerenderte HTML-Ausgabe'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          fachbereich: default
+          kommune: default
+          page: default
+        'entity:user':
+          user: default
+  title:
+    label: Titel
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+  type:
+    label: Inhaltstyp
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  uid:
+    label: Benutzer-ID
+    datasource_id: 'entity:user'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - user
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - aufgabe
+        - projekt
+        - skill
+    languages:
+      default: true
+      selected: {  }
+  'entity:user':
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  ignorecase:
+    all_fields: true
+    fields:
+      - body
+      - mail
+      - name
+      - name_1
+      - name_2
+      - rendered_item
+      - title
+      - type
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  reverse_entity_references: {  }
+  tokenizer:
+    all_fields: true
+    fields:
+      - body
+      - mail
+      - name
+      - name_2
+      - rendered_item
+      - title
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_server

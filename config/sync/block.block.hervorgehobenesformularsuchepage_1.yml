@@ -1,0 +1,29 @@
+uuid: f5ced2aa-b387-46b1-aa76-92806934a20d
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.suche
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: hervorgehobenesformularsuchepage_1
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:suche-page_1'
+settings:
+  id: 'views_exposed_filter_block:suche-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }
