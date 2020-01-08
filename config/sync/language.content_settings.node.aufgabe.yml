@@ -1,0 +1,11 @@
+uuid: edf1883c-eb38-49f8-8ace-8c55f0103aa1
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.aufgabe
+id: node.aufgabe
+target_entity_type_id: node
+target_bundle: aufgabe
+default_langcode: site_default
+language_alterable: false

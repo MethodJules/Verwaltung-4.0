@@ -1,0 +1,31 @@
+uuid: 04f578db-74a4-41cb-a65b-24f1bdf20cd9
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.aufgabe.body
+    - node.type.aufgabe
+  module:
+    - text
+    - user
+id: node.aufgabe.teaser
+targetEntityType: node
+bundle: aufgabe
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

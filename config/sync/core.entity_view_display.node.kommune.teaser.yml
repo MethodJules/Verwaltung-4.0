@@ -1,0 +1,33 @@
+uuid: 5e5cca60-6cf8-4d49-a1a3-da7dde1503eb
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.kommune.body
+    - field.field.node.kommune.field_fachbereich
+    - node.type.kommune
+  module:
+    - text
+    - user
+id: node.kommune.teaser
+targetEntityType: node
+bundle: kommune
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_fachbereich: true
+  langcode: true

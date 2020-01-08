@@ -1,0 +1,11 @@
+uuid: 4a4ccea2-de7c-439c-abf3-ae981e6632c5
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.kommune
+id: node.kommune
+target_entity_type_id: node
+target_bundle: kommune
+default_langcode: site_default
+language_alterable: false

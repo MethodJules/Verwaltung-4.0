@@ -1,0 +1,29 @@
+uuid: 9ab54324-eee3-4298-b5d3-f76e4fdfecb6
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.aufgabe.body
+    - node.type.aufgabe
+  module:
+    - text
+    - user
+id: node.aufgabe.default
+targetEntityType: node
+bundle: aufgabe
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

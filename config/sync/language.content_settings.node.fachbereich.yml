@@ -1,0 +1,11 @@
+uuid: b96d368c-d044-4f60-8ae6-0f1a23160d94
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.fachbereich
+id: node.fachbereich
+target_entity_type_id: node
+target_bundle: fachbereich
+default_langcode: site_default
+language_alterable: false

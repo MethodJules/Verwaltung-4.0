@@ -1,0 +1,29 @@
+uuid: 321d088e-936c-4c28-884a-c466cbb2c7de
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_aufgabe
+    - node.type.aufgabe
+  module:
+    - user
+id: user.user.field_aufgabe
+field_name: field_aufgabe
+entity_type: user
+bundle: user
+label: Aufgaben
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      aufgabe: aufgabe
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

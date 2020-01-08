@@ -1,19 +1,17 @@
-uuid: dd437514-6cb7-4cce-b9c6-0ee37fbbe699
+uuid: 54a6c110-7ec8-44d9-a223-510447b90975
 langcode: de
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.article
+    - node.type.kommune
   module:
     - text
-_core:
-  default_config_hash: IjZnOLWk1Pjq3WRg2pLSA1ERh7Po7izCq_p6UztZr2c
-id: node.article.body
+id: node.kommune.body
 field_name: body
 entity_type: node
-bundle: article
-label: Textkörper
+bundle: kommune
+label: Body
 description: ''
 required: false
 translatable: true

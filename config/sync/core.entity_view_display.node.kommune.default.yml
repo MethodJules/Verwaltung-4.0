@@ -1,0 +1,31 @@
+uuid: 2ff219a0-2c3b-4506-a558-2dbfadbf15b7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.kommune.body
+    - field.field.node.kommune.field_fachbereich
+    - node.type.kommune
+  module:
+    - user
+id: node.kommune.default
+targetEntityType: node
+bundle: kommune
+mode: default
+content:
+  field_fachbereich:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  langcode: true

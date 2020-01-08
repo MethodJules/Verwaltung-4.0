@@ -1,0 +1,28 @@
+uuid: 4c7b27c0-6b90-4c61-a097-406600e51bda
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fachbereich
+    - node.type.fachbereich
+    - node.type.kommune
+id: node.kommune.field_fachbereich
+field_name: field_fachbereich
+entity_type: node
+bundle: kommune
+label: Fachbereiche
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      fachbereich: fachbereich
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

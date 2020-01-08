@@ -1,0 +1,29 @@
+uuid: cd4883d9-3786-47f2-b568-49e31ee1e0b5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person
+    - node.type.projekt
+id: node.projekt.field_person
+field_name: field_person
+entity_type: node
+bundle: projekt
+label: Person
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

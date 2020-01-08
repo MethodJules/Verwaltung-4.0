@@ -1,0 +1,29 @@
+uuid: 415ef470-92dc-4b61-8729-c213d3499054
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_fachbereich
+    - node.type.fachbereich
+  module:
+    - user
+id: user.user.field_fachbereich
+field_name: field_fachbereich
+entity_type: user
+bundle: user
+label: Fachbereich
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      fachbereich: fachbereich
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

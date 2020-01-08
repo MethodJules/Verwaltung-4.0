@@ -1,0 +1,18 @@
+uuid: c2a26b44-8bb6-4f25-ae9b-9849553413c2
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Kommune
+type: kommune
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

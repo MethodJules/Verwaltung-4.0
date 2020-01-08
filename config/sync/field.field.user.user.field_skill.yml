@@ -1,0 +1,29 @@
+uuid: 159c8349-53e1-4c4a-a6c7-bdff64576e23
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_skill
+    - node.type.skill
+  module:
+    - user
+id: user.user.field_skill
+field_name: field_skill
+entity_type: user
+bundle: user
+label: Skills
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      skill: skill
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

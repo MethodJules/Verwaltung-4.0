@@ -1,0 +1,11 @@
+uuid: 5b170bf3-4cb4-4e69-9a91-2f9145741b28
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.projekt
+id: node.projekt
+target_entity_type_id: node
+target_bundle: projekt
+default_langcode: site_default
+language_alterable: false

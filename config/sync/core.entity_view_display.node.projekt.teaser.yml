@@ -1,0 +1,35 @@
+uuid: e5f4616a-6500-4612-843c-02779d54a7b9
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.projekt.body
+    - field.field.node.projekt.field_kommune
+    - field.field.node.projekt.field_person
+    - node.type.projekt
+  module:
+    - text
+    - user
+id: node.projekt.teaser
+targetEntityType: node
+bundle: projekt
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_kommune: true
+  field_person: true
+  langcode: true
