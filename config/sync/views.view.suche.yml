@@ -1,18 +1,20 @@
-uuid: 5ddb2a36-8418-4018-bbdb-a32955d0ce0d
+uuid: d90b845c-4053-4816-8b35-a3ecd76aad33
 langcode: de
 status: true
 dependencies:
   config:
-    - search_api.index.local_db_search
-    - system.menu.account
+    - field.storage.node.body
+    - search_api.index.solr_server
+    - system.menu.main
   module:
     - search_api
+    - text
 id: suche
 label: Suche
 module: views
 description: ''
 tag: ''
-base_table: search_api_index_local_db_search
+base_table: search_api_index_solr_server
 base_field: search_api_id
 display:
   default:
@@ -40,7 +42,7 @@ display:
           reset_button: false
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
-          expose_sort_order: false
+          expose_sort_order: true
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
           text_input_required: 'Wählen Sie einen beliebigen Filter und klicken Sie auf Anwenden, um Ergebnisse zu sehen'
@@ -77,10 +79,10 @@ display:
           separator: ''
           hide_empty: false
       fields:
-        title_1:
-          id: title_1
-          table: search_api_datasource_local_db_search_entity_node
-          field: title
+        body:
+          id: body
+          table: search_api_index_solr_server
+          field: body
           relationship: none
           group_type: group
           admin_label: ''
@@ -122,13 +124,12 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
+          type: text_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -139,18 +140,19 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          field_rendering: true
+          field_rendering: false
           fallback_handler: search_api
           fallback_options:
-            link_to_item: false
+            link_to_item: true
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          entity_type: node
+          entity_type: null
+          entity_field: null
           plugin_id: search_api_field
         name:
           id: name
-          table: search_api_datasource_local_db_search_entity_user
+          table: search_api_index_solr_server
           field: name
           relationship: none
           group_type: group
@@ -193,13 +195,13 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -210,19 +212,88 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          field_rendering: true
+          field_rendering: false
           fallback_handler: search_api
           fallback_options:
-            link_to_item: false
+            link_to_item: true
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          entity_type: user
+          plugin_id: search_api_field
+        title:
+          id: title
+          table: search_api_index_solr_server
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: false
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: true
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
           plugin_id: search_api_field
       filters:
         search_api_fulltext:
           id: search_api_fulltext
-          table: search_api_index_local_db_search
+          table: search_api_index_solr_server
           field: search_api_fulltext
           relationship: none
           group_type: group
@@ -260,15 +331,13 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: terms
+          parse_mode: direct
           min_length: null
-          fields:
-            - body
-            - rendered_item
+          fields: {  }
           plugin_id: search_api_fulltext
         type:
           id: type
-          table: search_api_index_local_db_search
+          table: search_api_index_solr_server
           field: type
           relationship: none
           group_type: group
@@ -320,6 +389,10 @@ display:
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -327,7 +400,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.body'
   page_1:
     display_plugin: page
     id: page_1
@@ -335,12 +409,22 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: search
+      path: suche
+      exposed_block: true
       menu:
         type: normal
         title: Suche
-        menu_name: account
-      exposed_block: true
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      tab_options:
+        type: none
+        title: ''
+        description: ''
+        weight: 0
     cache_metadata:
       max-age: -1
       contexts:
@@ -348,4 +432,5 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.body'
