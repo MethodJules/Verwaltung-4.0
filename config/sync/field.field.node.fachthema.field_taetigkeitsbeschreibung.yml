@@ -1,0 +1,21 @@
+uuid: e97eab32-fb6b-43f9-a64c-3bb0f7a44bc1
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_taetigkeitsbeschreibung
+    - node.type.fachthema
+  module:
+    - text
+id: node.fachthema.field_taetigkeitsbeschreibung
+field_name: field_taetigkeitsbeschreibung
+entity_type: node
+bundle: fachthema
+label: Tätigkeitsbeschreibung
+description: 'Bitte geben Sie hier Beschreibungen zu Ihren Tätigkeiten ein. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

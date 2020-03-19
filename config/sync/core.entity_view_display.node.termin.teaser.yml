@@ -1,0 +1,40 @@
+uuid: e288c7e4-70e2-4647-a1ce-6e913b6e93c1
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.termin.body
+    - field.field.node.termin.field_ort
+    - field.field.node.termin.field_protokoll
+    - field.field.node.termin.field_teilnehmerliste
+    - field.field.node.termin.field_zeitpunkt
+    - node.type.termin
+  module:
+    - text
+    - user
+id: node.termin.teaser
+targetEntityType: node
+bundle: termin
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ort: true
+  field_protokoll: true
+  field_teilnehmerliste: true
+  field_zeitpunkt: true
+  langcode: true
+  search_api_excerpt: true

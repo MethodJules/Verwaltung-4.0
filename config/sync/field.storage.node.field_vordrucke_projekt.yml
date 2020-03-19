@@ -1,0 +1,23 @@
+uuid: 0bd2aa64-48ae-49fe-b37d-35b661178514
+langcode: de
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_vordrucke_projekt
+field_name: field_vordrucke_projekt
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,27 @@
+uuid: c0ee06bd-f0dc-4c7d-b15c-e783a35d785e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_protokoll
+    - node.type.termin
+  module:
+    - file
+id: node.termin.field_protokoll
+field_name: field_protokoll
+entity_type: node
+bundle: termin
+label: Protokoll
+description: 'Hier können Sie Protokolle zum Termin hochladen. Zulässige Dateiformate: PDF, Word-Dateiformate, txt'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc docx docm pdf'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,0 +1,20 @@
+uuid: 513a3a4f-9f5a-4c2d-af9d-08fd85b2a710
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_ablauf
+field_name: field_ablauf
+entity_type: node
+type: text
+settings:
+  max_length: 500
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

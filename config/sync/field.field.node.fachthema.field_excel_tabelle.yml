@@ -1,0 +1,27 @@
+uuid: 27c804e6-f4a7-4ccf-be4b-4d98f176cc62
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_excel_tabelle
+    - node.type.fachthema
+  module:
+    - file
+id: node.fachthema.field_excel_tabelle
+field_name: field_excel_tabelle
+entity_type: node
+bundle: fachthema
+label: Excel-Tabelle
+description: 'Hier können SIe Exce-Tabellen zu bestimmten Tätigkeiten hochladen.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'xls xlsx xlsm'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

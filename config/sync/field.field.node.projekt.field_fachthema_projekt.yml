@@ -1,0 +1,28 @@
+uuid: 3a3bb9e2-4052-4fed-8f37-11cb7e5d023a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fachthema_projekt
+    - node.type.fachthema
+    - node.type.projekt
+id: node.projekt.field_fachthema_projekt
+field_name: field_fachthema_projekt
+entity_type: node
+bundle: projekt
+label: Fachthema
+description: 'Bitte geben Sie das Fachthema an, unter welches das Projekt fällt.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      fachthema: fachthema
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

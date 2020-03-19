@@ -1,0 +1,11 @@
+uuid: 05c1e3a4-3135-40dc-8fe9-bef31f25ed88
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.projektart
+id: taxonomy_term.projektart
+target_entity_type_id: taxonomy_term
+target_bundle: projektart
+default_langcode: site_default
+language_alterable: false

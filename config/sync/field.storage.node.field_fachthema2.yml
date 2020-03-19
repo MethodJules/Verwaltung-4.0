@@ -1,0 +1,19 @@
+uuid: a00c57da-84ad-46f6-b234-ec6d6697125c
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_fachthema2
+field_name: field_fachthema2
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

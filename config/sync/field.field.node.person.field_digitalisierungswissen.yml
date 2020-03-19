@@ -1,0 +1,28 @@
+uuid: 782d4c29-2e89-4b95-baa3-c6bcf990b9d2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_digitalisierungswissen
+    - node.type.digitalisierungswissen
+    - node.type.person
+id: node.person.field_digitalisierungswissen
+field_name: field_digitalisierungswissen
+entity_type: node
+bundle: person
+label: Digitalisierungswissen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      digitalisierungswissen: digitalisierungswissen
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

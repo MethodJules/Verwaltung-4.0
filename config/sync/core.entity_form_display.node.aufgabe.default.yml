@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.aufgabe.body
+    - field.field.node.aufgabe.field_ablauf
+    - field.field.node.aufgabe.field_beschreibung_aufgabe
+    - field.field.node.aufgabe.field_fachthema_aufgabe
     - node.type.aufgabe
   module:
     - path
@@ -29,6 +32,32 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_ablauf:
+    weight: 123
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_beschreibung_aufgabe:
+    weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_fachthema_aufgabe:
+    weight: 124
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 2

@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.aufgabe.body
+    - field.field.node.aufgabe.field_ablauf
+    - field.field.node.aufgabe.field_beschreibung_aufgabe
+    - field.field.node.aufgabe.field_fachthema_aufgabe
     - node.type.aufgabe
   module:
     - text
@@ -28,4 +31,8 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_ablauf: true
+  field_beschreibung_aufgabe: true
+  field_fachthema_aufgabe: true
   langcode: true
+  search_api_excerpt: true

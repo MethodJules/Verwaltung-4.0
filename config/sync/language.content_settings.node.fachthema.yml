@@ -1,0 +1,11 @@
+uuid: 98e9b9ce-0705-4563-b207-e31ee7c58654
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.fachthema
+id: node.fachthema
+target_entity_type_id: node
+target_bundle: fachthema
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,27 @@
+uuid: 26cf68be-b228-4457-8cd6-bb0641226f69
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organigramm
+    - node.type.kommune
+  module:
+    - file
+id: node.kommune.field_organigramm
+field_name: field_organigramm
+entity_type: node
+bundle: kommune
+label: Organigramm
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

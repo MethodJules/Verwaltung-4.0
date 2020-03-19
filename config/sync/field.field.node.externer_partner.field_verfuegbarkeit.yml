@@ -1,0 +1,19 @@
+uuid: 07fe285b-c951-4a6a-90fd-0aabd45165e8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_verfuegbarkeit
+    - node.type.externer_partner
+id: node.externer_partner.field_verfuegbarkeit
+field_name: field_verfuegbarkeit
+entity_type: node
+bundle: externer_partner
+label: Verfügbarkeit
+description: 'Bitte geben Sie Verfügbarkeiten des externen Partners an'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

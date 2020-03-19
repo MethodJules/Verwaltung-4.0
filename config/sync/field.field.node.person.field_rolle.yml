@@ -1,0 +1,29 @@
+uuid: 162c7e6d-ea1f-4916-b2f6-d0a6872ec7cf
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rolle
+    - node.type.person
+    - taxonomy.vocabulary.rolle
+id: node.person.field_rolle
+field_name: field_rolle
+entity_type: node
+bundle: person
+label: Rolle
+description: 'Geben Sie die Rolle der Person an.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      rolle: rolle
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

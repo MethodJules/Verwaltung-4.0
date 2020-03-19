@@ -1,0 +1,11 @@
+uuid: 5a3be7dd-ee0a-4641-b566-48c5fc4394c2
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.rolle
+id: taxonomy_term.rolle
+target_entity_type_id: taxonomy_term
+target_bundle: rolle
+default_langcode: site_default
+language_alterable: false

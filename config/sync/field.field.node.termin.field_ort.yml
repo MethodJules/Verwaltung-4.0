@@ -1,0 +1,19 @@
+uuid: 53c1d470-1870-4688-a091-41f15ccb0fe0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ort
+    - node.type.termin
+id: node.termin.field_ort
+field_name: field_ort
+entity_type: node
+bundle: termin
+label: Ort
+description: 'Geben Sie hier den Ort des Termines an. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

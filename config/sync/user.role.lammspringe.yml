@@ -1,0 +1,9 @@
+uuid: b4875d93-4710-4c53-af0d-682be573a2e4
+langcode: de
+status: true
+dependencies: {  }
+id: lammspringe
+label: Lammspringe
+weight: 3
+is_admin: null
+permissions: {  }

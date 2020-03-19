@@ -1,0 +1,28 @@
+uuid: cf632acb-c8b8-4b48-bb05-b785caa7531e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_termine
+    - node.type.projekt
+    - node.type.termin
+id: node.projekt.field_termine
+field_name: field_termine
+entity_type: node
+bundle: projekt
+label: Termine
+description: 'Ein Termin eines Projektes'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      termin: termin
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

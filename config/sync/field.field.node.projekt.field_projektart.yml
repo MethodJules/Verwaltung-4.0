@@ -1,0 +1,29 @@
+uuid: 0c07c6d3-e872-46c8-a5ee-c57f988358db
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_projektart
+    - node.type.projekt
+    - taxonomy.vocabulary.projektart
+id: node.projekt.field_projektart
+field_name: field_projektart
+entity_type: node
+bundle: projekt
+label: Projektart
+description: 'Geben Sie hier die Projektart an. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      projektart: projektart
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

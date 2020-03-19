@@ -1,0 +1,18 @@
+uuid: 13f0e416-eb50-4faa-a58f-7a84491d0863
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Digitalisierungswissen
+type: digitalisierungswissen
+description: 'Dieser Inhaltstyp beschreibt Digitalisierungswissen'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,21 @@
+uuid: 6094dfc7-3760-4c88-9ba9-b7ca084b43bd
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ablauf
+    - node.type.aufgabe
+  module:
+    - text
+id: node.aufgabe.field_ablauf
+field_name: field_ablauf
+entity_type: node
+bundle: aufgabe
+label: Ablauf
+description: 'Bitte fügen Sie hier den Ablauf der Aufgabe ein. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

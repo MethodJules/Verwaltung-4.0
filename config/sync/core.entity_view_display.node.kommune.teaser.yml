@@ -5,7 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.kommune.body
-    - field.field.node.kommune.field_fachbereich
+    - field.field.node.kommune.field_beschreibung
+    - field.field.node.kommune.field_externe_partner
+    - field.field.node.kommune.field_fachthema2
+    - field.field.node.kommune.field_kommunenwappen
+    - field.field.node.kommune.field_organigramm
+    - field.field.node.kommune.field_person
     - node.type.kommune
   module:
     - text
@@ -29,5 +34,11 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_fachbereich: true
+  field_beschreibung: true
+  field_externe_partner: true
+  field_fachthema2: true
+  field_kommunenwappen: true
+  field_organigramm: true
+  field_person: true
   langcode: true
+  search_api_excerpt: true

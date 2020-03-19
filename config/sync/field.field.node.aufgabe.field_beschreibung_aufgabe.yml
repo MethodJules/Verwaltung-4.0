@@ -1,0 +1,21 @@
+uuid: b4e55a78-a313-4d7c-91d8-d0eb0b0e1607
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beschreibung_aufgabe
+    - node.type.aufgabe
+  module:
+    - text
+id: node.aufgabe.field_beschreibung_aufgabe
+field_name: field_beschreibung_aufgabe
+entity_type: node
+bundle: aufgabe
+label: Beschreibung
+description: 'Geben Sie eine Beschreibung der Aufgabe an'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

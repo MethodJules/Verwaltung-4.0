@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Aufgabe
 type: aufgabe
-description: ''
+description: 'Dieser Inhaltstyp beschreibt eine Aufgabe'
 help: ''
 new_revision: true
 preview_mode: 1

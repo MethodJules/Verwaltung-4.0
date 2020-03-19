@@ -1,0 +1,19 @@
+uuid: 7eb5737e-c2ff-414b-a48e-019af5dc329c
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_kommunen
+field_name: field_kommunen
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

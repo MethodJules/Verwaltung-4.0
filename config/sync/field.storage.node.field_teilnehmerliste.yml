@@ -1,0 +1,20 @@
+uuid: 6718482c-eb56-493e-89ea-78daab8d8137
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_teilnehmerliste
+field_name: field_teilnehmerliste
+entity_type: node
+type: text
+settings:
+  max_length: 1000
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

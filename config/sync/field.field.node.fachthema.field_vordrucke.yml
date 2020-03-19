@@ -1,0 +1,27 @@
+uuid: 510596a3-4700-4eb8-84cf-5e324bc058c7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vordrucke
+    - node.type.fachthema
+  module:
+    - file
+id: node.fachthema.field_vordrucke
+field_name: field_vordrucke
+entity_type: node
+bundle: fachthema
+label: Vordrucke
+description: 'Hier können Sie Vordrucke hochladen. Zuslässige Datei-Formate sind: PDF, Word-Dateiformat, txt.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc docx docm pdf'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

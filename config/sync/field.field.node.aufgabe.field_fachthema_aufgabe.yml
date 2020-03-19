@@ -1,0 +1,28 @@
+uuid: 8df4b721-d188-4034-be96-fc57840fe988
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fachthema_aufgabe
+    - node.type.aufgabe
+    - node.type.fachthema
+id: node.aufgabe.field_fachthema_aufgabe
+field_name: field_fachthema_aufgabe
+entity_type: node
+bundle: aufgabe
+label: Fachthema
+description: 'Geben Sie hier das Fachthema an, welches der Aufgabe zugeordnet ist'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      fachthema: fachthema
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

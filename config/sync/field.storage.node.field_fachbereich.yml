@@ -1,18 +1,19 @@
-uuid: e2124dc8-79ed-42a1-af61-5641a0a30546
+uuid: 1e30b303-bd9e-4428-86ea-f7e788e04b63
 langcode: de
 status: true
 dependencies:
   module:
     - node
+    - taxonomy
 id: node.field_fachbereich
 field_name: field_fachbereich
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

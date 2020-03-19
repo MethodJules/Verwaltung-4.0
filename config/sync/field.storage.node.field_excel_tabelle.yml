@@ -1,0 +1,23 @@
+uuid: 383feb96-8f19-4ea9-b416-d7f0132797c4
+langcode: de
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_excel_tabelle
+field_name: field_excel_tabelle
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

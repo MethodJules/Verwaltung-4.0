@@ -1,0 +1,19 @@
+uuid: 654605d8-c747-444c-8bca-017a6cd93793
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_zeitpunkt
+    - node.type.termin
+id: node.termin.field_zeitpunkt
+field_name: field_zeitpunkt
+entity_type: node
+bundle: termin
+label: Zeitpunkt
+description: 'Geben sie hier den Zeitpunkt des Termines mit Datum und Uhrzeit an. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

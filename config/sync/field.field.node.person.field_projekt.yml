@@ -1,0 +1,28 @@
+uuid: 3829e76d-597d-4c6b-922d-849a0a0ff27e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_projekt
+    - node.type.person
+    - node.type.projekt
+id: node.person.field_projekt
+field_name: field_projekt
+entity_type: node
+bundle: person
+label: Projekte
+description: 'Bitte geben Sie an, in welchen projekten der Mitarbeiter tätig ist. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      projekt: projekt
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

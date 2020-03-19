@@ -1,0 +1,28 @@
+uuid: 4eb040c7-3625-480e-9ad7-bcf4d65bfc8b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person
+    - node.type.kommune
+    - node.type.person
+id: node.kommune.field_person
+field_name: field_person
+entity_type: node
+bundle: kommune
+label: Mitarbeiter
+description: 'Bitte geben Sie ihre Mitarbeiter an. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 488924b0-0548-44ea-b9c7-69f8876990c9
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ansprechpartner
+field_name: field_ansprechpartner
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

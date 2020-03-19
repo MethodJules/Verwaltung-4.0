@@ -1,0 +1,20 @@
+uuid: ee8cdc86-3174-4e85-a160-568abd0b7d35
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_beschreibung_aufgabe
+field_name: field_beschreibung_aufgabe
+entity_type: node
+type: text
+settings:
+  max_length: 500
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

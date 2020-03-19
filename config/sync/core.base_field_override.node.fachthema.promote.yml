@@ -1,0 +1,22 @@
+uuid: b2164741-4516-4b3b-b8c4-03ffcb7c353d
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.fachthema
+id: node.fachthema.promote
+field_name: promote
+entity_type: node
+bundle: fachthema
+label: 'Auf der Startseite anzeigen'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

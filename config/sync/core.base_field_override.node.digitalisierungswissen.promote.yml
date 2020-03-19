@@ -1,0 +1,22 @@
+uuid: 7f9e8750-ee3e-49a3-a7bc-b7846e656fe0
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.digitalisierungswissen
+id: node.digitalisierungswissen.promote
+field_name: promote
+entity_type: node
+bundle: digitalisierungswissen
+label: 'Auf der Startseite anzeigen'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

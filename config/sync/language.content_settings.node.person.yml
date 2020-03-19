@@ -1,0 +1,11 @@
+uuid: 29a2dba1-eee7-4485-bb1c-9dce011abb37
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.person
+id: node.person
+target_entity_type_id: node
+target_bundle: person
+default_langcode: site_default
+language_alterable: false

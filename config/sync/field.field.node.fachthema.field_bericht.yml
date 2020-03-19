@@ -1,0 +1,27 @@
+uuid: 6040843c-e080-49da-be28-0298ef62136f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bericht
+    - node.type.fachthema
+  module:
+    - file
+id: node.fachthema.field_bericht
+field_name: field_bericht
+entity_type: node
+bundle: fachthema
+label: Bericht
+description: 'Hier können Sie Berichte hochladen. Zulässige Datei-Formate sind: PDF, Word-Dateiformate, txt'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc docx docm pdf'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,0 +1,8 @@
+uuid: 127a135c-2099-49dc-8cc0-d10824b71fe4
+langcode: de
+status: true
+dependencies: {  }
+name: Fachbereich
+vid: fachbereich
+description: ''
+weight: 0

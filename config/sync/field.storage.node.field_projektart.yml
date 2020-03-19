@@ -1,0 +1,20 @@
+uuid: 8d671cf3-8f84-4b6b-9521-6c88857fb9c8
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_projektart
+field_name: field_projektart
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

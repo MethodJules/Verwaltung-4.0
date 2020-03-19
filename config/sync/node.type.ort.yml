@@ -1,0 +1,18 @@
+uuid: c27c48f1-3708-4332-b4dc-a4d19da619ac
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Ort
+type: ort
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

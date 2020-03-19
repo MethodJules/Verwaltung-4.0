@@ -1,0 +1,21 @@
+uuid: 5892bd9d-2b21-43f3-bb59-35f6917d4a24
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beschreibung_ext
+    - node.type.externer_partner
+  module:
+    - text
+id: node.externer_partner.field_beschreibung_ext
+field_name: field_beschreibung_ext
+entity_type: node
+bundle: externer_partner
+label: Beschreibung
+description: 'Bitte Geben Sie eine Beschreibung des externen Partners an. In welchem Verhältnis stehen Sie? Welche DL/ welches Produkt wird bezogen?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

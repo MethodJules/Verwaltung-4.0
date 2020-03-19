@@ -1,0 +1,22 @@
+uuid: 3a80350a-018f-4475-888f-6394b8cfa7c3
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.termin
+id: node.termin.promote
+field_name: promote
+entity_type: node
+bundle: termin
+label: 'Auf der Startseite anzeigen'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

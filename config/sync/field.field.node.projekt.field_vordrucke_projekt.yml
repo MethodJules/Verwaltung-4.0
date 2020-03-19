@@ -1,0 +1,27 @@
+uuid: 94018d2c-1554-41dc-bf2c-4f4a9e06f00c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vordrucke_projekt
+    - node.type.projekt
+  module:
+    - file
+id: node.projekt.field_vordrucke_projekt
+field_name: field_vordrucke_projekt
+entity_type: node
+bundle: projekt
+label: Vordrucke
+description: 'Hier können SIe Vordrucke hochladen.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc docx docm pdf'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

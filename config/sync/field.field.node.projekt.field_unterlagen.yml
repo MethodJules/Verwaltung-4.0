@@ -1,0 +1,27 @@
+uuid: 0bd812a1-2e6c-4212-8556-9f85822030f2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_unterlagen
+    - node.type.projekt
+  module:
+    - file
+id: node.projekt.field_unterlagen
+field_name: field_unterlagen
+entity_type: node
+bundle: projekt
+label: Unterlagen
+description: 'Hier können sie Unterlagen, die das Projekt betreffen, hochladen. Zulässige Formate sind: PDF, Word-Dateiformate, txt, Excel-Dateiformate'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc docx docm pdf xls xlxs xlxm'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,0 +1,8 @@
+uuid: d2b98d92-d18f-4186-9215-b1f564a56fdf
+langcode: de
+status: true
+dependencies: {  }
+name: Projektart
+vid: projektart
+description: ''
+weight: 0

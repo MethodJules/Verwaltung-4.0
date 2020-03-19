@@ -1,0 +1,20 @@
+uuid: aafa9862-34d7-45fd-a7f7-3ce50107239e
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_taetigkeitsbeschreibung
+field_name: field_taetigkeitsbeschreibung
+entity_type: node
+type: text
+settings:
+  max_length: 1000
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

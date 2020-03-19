@@ -1,0 +1,22 @@
+uuid: 8ab205f6-4f32-4d90-839e-c502d5b742e4
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.externer_partner
+id: node.externer_partner.promote
+field_name: promote
+entity_type: node
+bundle: externer_partner
+label: 'Auf der Startseite anzeigen'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

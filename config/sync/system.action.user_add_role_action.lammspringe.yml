@@ -1,0 +1,14 @@
+uuid: 9520454c-5664-4caa-8f77-c3a4443f3748
+langcode: de
+status: true
+dependencies:
+  config:
+    - user.role.lammspringe
+  module:
+    - user
+id: user_add_role_action.lammspringe
+label: 'Den ausgewählten Benutzern die Rolle Lammspringe zuweisen'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: lammspringe

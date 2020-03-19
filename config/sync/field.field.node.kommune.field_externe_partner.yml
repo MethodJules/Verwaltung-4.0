@@ -1,0 +1,28 @@
+uuid: fcf21e49-31f3-4d15-92d5-9ab8348fe66a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_externe_partner
+    - node.type.externer_partner
+    - node.type.kommune
+id: node.kommune.field_externe_partner
+field_name: field_externe_partner
+entity_type: node
+bundle: kommune
+label: 'Externe Partner'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      externer_partner: externer_partner
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

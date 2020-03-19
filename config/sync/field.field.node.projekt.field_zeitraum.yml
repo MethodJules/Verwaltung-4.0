@@ -1,0 +1,19 @@
+uuid: cbe7cdec-1a64-4a4b-810e-ec074b10ac66
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_zeitraum
+    - node.type.projekt
+id: node.projekt.field_zeitraum
+field_name: field_zeitraum
+entity_type: node
+bundle: projekt
+label: Zeitraum
+description: 'Bitte geben Sie hier den Projektzeitraum an.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

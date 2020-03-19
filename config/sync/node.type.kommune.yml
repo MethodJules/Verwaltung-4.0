@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Kommune
 type: kommune
-description: ''
+description: 'Dieser Inhaltstyp beschreibt eine Kommune'
 help: ''
 new_revision: true
 preview_mode: 1

@@ -1,0 +1,29 @@
+uuid: 8febb465-427d-489a-b928-43b28a878f74
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_skills
+    - node.type.person
+    - taxonomy.vocabulary.skill
+id: node.person.field_skills
+field_name: field_skills
+entity_type: node
+bundle: person
+label: Skills
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      skill: skill
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

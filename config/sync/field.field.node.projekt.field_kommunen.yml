@@ -1,0 +1,28 @@
+uuid: 38ce8826-78fc-4e0e-ab69-24d70c8562ee
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kommunen
+    - node.type.kommune
+    - node.type.projekt
+id: node.projekt.field_kommunen
+field_name: field_kommunen
+entity_type: node
+bundle: projekt
+label: Kommunen
+description: 'Hier können Sie Kommunen die an diesem Projekt mitwirken zuordnen.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      kommune: kommune
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

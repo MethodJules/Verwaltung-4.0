@@ -1,0 +1,22 @@
+uuid: 70fdbbd1-320d-41e1-b89a-8418985f1490
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.person
+id: node.person.promote
+field_name: promote
+entity_type: node
+bundle: person
+label: 'Auf der Startseite anzeigen'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

@@ -1,16 +1,15 @@
-uuid: fad74f69-476d-4bd0-bb88-102f9895182a
+uuid: b18d82ee-5dca-475d-b61d-d9e4530e7380
 langcode: de
 status: true
 dependencies:
   module:
     - node
-    - user
 id: node.field_person
 field_name: field_person
 entity_type: node
 type: entity_reference
 settings:
-  target_type: user
+  target_type: node
 module: core
 locked: false
 cardinality: -1

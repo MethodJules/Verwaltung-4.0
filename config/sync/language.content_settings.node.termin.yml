@@ -1,0 +1,11 @@
+uuid: 25170d94-ebc9-4181-b202-177a0b7cdc4b
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.termin
+id: node.termin
+target_entity_type_id: node
+target_bundle: termin
+default_langcode: site_default
+language_alterable: false

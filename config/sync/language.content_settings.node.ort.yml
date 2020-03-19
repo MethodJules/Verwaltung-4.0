@@ -1,0 +1,11 @@
+uuid: 2c8a62b5-2637-4e51-9957-b5bacc244e7f
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.ort
+id: node.ort
+target_entity_type_id: node
+target_bundle: ort
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,23 @@
+uuid: 58eb5d2a-d08c-4a5f-946b-f458fa619dd9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.fachthema
+  module:
+    - text
+id: node.fachthema.body
+field_name: body
+entity_type: node
+bundle: fachthema
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

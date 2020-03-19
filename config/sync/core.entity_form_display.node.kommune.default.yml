@@ -4,10 +4,19 @@ status: true
 dependencies:
   config:
     - field.field.node.kommune.body
-    - field.field.node.kommune.field_fachbereich
+    - field.field.node.kommune.field_beschreibung
+    - field.field.node.kommune.field_externe_partner
+    - field.field.node.kommune.field_fachthema2
+    - field.field.node.kommune.field_kommunenwappen
+    - field.field.node.kommune.field_organigramm
+    - field.field.node.kommune.field_person
+    - image.style.thumbnail
     - node.type.kommune
   module:
+    - file
+    - image
     - path
+    - text
 id: node.kommune.default
 targetEntityType: node
 bundle: kommune
@@ -19,8 +28,51 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_fachbereich:
-    weight: 1
+  field_beschreibung:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_externe_partner:
+    weight: 29
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_fachthema2:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_kommunenwappen:
+    weight: 30
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_organigramm:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_person:
+    weight: 28
     settings:
       match_operator: CONTAINS
       match_limit: 10

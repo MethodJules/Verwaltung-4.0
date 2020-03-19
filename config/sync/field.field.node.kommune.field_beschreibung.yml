@@ -1,0 +1,21 @@
+uuid: 17588963-a343-4a09-b90b-cdc1cd1cc97a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beschreibung
+    - node.type.kommune
+  module:
+    - text
+id: node.kommune.field_beschreibung
+field_name: field_beschreibung
+entity_type: node
+bundle: kommune
+label: Beschreibung
+description: 'Hier können SIe eine Beschreibung der Kommune vornehmen'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

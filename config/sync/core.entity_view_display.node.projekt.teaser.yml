@@ -5,8 +5,15 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.projekt.body
-    - field.field.node.projekt.field_kommune
-    - field.field.node.projekt.field_person
+    - field.field.node.projekt.field_ansprechpartner
+    - field.field.node.projekt.field_beschreibung_projekt
+    - field.field.node.projekt.field_fachthema_projekt
+    - field.field.node.projekt.field_kommunen
+    - field.field.node.projekt.field_projektart
+    - field.field.node.projekt.field_termine
+    - field.field.node.projekt.field_unterlagen
+    - field.field.node.projekt.field_vordrucke_projekt
+    - field.field.node.projekt.field_zeitraum
     - node.type.projekt
   module:
     - text
@@ -30,6 +37,14 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_kommune: true
-  field_person: true
+  field_ansprechpartner: true
+  field_beschreibung_projekt: true
+  field_fachthema_projekt: true
+  field_kommunen: true
+  field_projektart: true
+  field_termine: true
+  field_unterlagen: true
+  field_vordrucke_projekt: true
+  field_zeitraum: true
   langcode: true
+  search_api_excerpt: true

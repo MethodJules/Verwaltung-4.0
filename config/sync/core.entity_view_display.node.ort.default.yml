@@ -1,0 +1,30 @@
+uuid: 33b05777-8ddf-4308-a5f6-0deb62507c51
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.ort.body
+    - node.type.ort
+  module:
+    - text
+    - user
+id: node.ort.default
+targetEntityType: node
+bundle: ort
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

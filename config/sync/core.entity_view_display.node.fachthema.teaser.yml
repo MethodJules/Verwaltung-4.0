@@ -1,0 +1,42 @@
+uuid: cce66d9e-53eb-407e-9db9-a2173432c547
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.fachthema.body
+    - field.field.node.fachthema.field_bericht
+    - field.field.node.fachthema.field_excel_tabelle
+    - field.field.node.fachthema.field_fachbereich
+    - field.field.node.fachthema.field_taetigkeitsbeschreibung
+    - field.field.node.fachthema.field_vordrucke
+    - node.type.fachthema
+  module:
+    - text
+    - user
+id: node.fachthema.teaser
+targetEntityType: node
+bundle: fachthema
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_bericht: true
+  field_excel_tabelle: true
+  field_fachbereich: true
+  field_taetigkeitsbeschreibung: true
+  field_vordrucke: true
+  langcode: true
+  search_api_excerpt: true

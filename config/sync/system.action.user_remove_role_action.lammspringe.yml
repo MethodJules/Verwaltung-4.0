@@ -1,0 +1,14 @@
+uuid: 3f93596e-4677-406a-8a95-be1cdc512887
+langcode: de
+status: true
+dependencies:
+  config:
+    - user.role.lammspringe
+  module:
+    - user
+id: user_remove_role_action.lammspringe
+label: 'Den ausgewählten Benutzern die Rolle Lammspringe entziehen'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: lammspringe

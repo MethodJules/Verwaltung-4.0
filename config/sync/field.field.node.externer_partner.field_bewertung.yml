@@ -1,0 +1,23 @@
+uuid: 31fd18ff-f7bd-497b-8390-6fb826a4f1fb
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bewertung
+    - node.type.externer_partner
+id: node.externer_partner.field_bewertung
+field_name: field_bewertung
+entity_type: node
+bundle: externer_partner
+label: Bewertung
+description: 'Bitte Bewerten Sie die Zufriedenheit mit diesem externen Partner von 1 überhaupt nicht zufrieden bis 5 sehr zufrieden. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer

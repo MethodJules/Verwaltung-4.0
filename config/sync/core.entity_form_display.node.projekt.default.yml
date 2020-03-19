@@ -4,10 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.node.projekt.body
-    - field.field.node.projekt.field_kommune
-    - field.field.node.projekt.field_person
+    - field.field.node.projekt.field_ansprechpartner
+    - field.field.node.projekt.field_beschreibung_projekt
+    - field.field.node.projekt.field_fachthema_projekt
+    - field.field.node.projekt.field_kommunen
+    - field.field.node.projekt.field_projektart
+    - field.field.node.projekt.field_termine
+    - field.field.node.projekt.field_unterlagen
+    - field.field.node.projekt.field_vordrucke_projekt
+    - field.field.node.projekt.field_zeitraum
     - node.type.projekt
   module:
+    - file
     - path
     - text
 id: node.projekt.default
@@ -31,17 +39,85 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_kommune:
-    weight: 2
-    settings: {  }
+  field_ansprechpartner:
+    weight: 33
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_buttons
+    type: entity_reference_autocomplete
     region: content
-  field_person:
-    weight: 3
-    settings: {  }
+  field_beschreibung_projekt:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
-    type: options_buttons
+    type: text_textarea
+    region: content
+  field_fachthema_projekt:
+    weight: 31
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_kommunen:
+    weight: 34
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_projektart:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_termine:
+    weight: 32
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_unterlagen:
+    weight: 29
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_vordrucke_projekt:
+    weight: 30
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_zeitraum:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   langcode:
     type: language_select

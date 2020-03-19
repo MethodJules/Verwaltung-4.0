@@ -1,0 +1,21 @@
+uuid: 18769e48-3510-49c4-98c6-c9a0d023101e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beschreibung_projekt
+    - node.type.projekt
+  module:
+    - text
+id: node.projekt.field_beschreibung_projekt
+field_name: field_beschreibung_projekt
+entity_type: node
+bundle: projekt
+label: Beschreibung
+description: 'Bitte geben Sie hier eine Projektbeschreibung an.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

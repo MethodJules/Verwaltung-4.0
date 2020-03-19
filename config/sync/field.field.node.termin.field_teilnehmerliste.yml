@@ -1,0 +1,21 @@
+uuid: 8aaebcce-9740-4d31-aa10-a5f13fa50c43
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teilnehmerliste
+    - node.type.termin
+  module:
+    - text
+id: node.termin.field_teilnehmerliste
+field_name: field_teilnehmerliste
+entity_type: node
+bundle: termin
+label: Teilnehmerliste
+description: 'geben Sie hier an, wer an dem Termin teilnimmt.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
