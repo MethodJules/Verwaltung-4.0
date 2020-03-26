@@ -1,0 +1,58 @@
+version: '3'
+services:
+  verwaltung40_d8_db:
+    image: mysql:5.7
+    command: --max_allowed_packet=32505856 #Set max_allowed_packet to 256M
+    environment:
+      MYSQL_DATABASE: verwaltung40_d8
+      MYSQL_ROOT_PASSWORD: verwaltung40_d8
+    ports:
+      - "3307:3306"
+    volumes:
+      - verwaltung40_d8_db_data:/var/lib/mysql
+    restart: always
+    #network_mode: host
+  verwaltung40_d8_drupal:
+    depends_on:
+      - verwaltung40_d8_db
+    build: .
+    ports:
+      - "8081:80"
+    volumes:
+      - ..:/app
+    #network_mode: host
+    restart: always
+  #corenlp:
+  #  image: nlpbox/corenlp
+  #  ports:
+  #    - "9000:9000"
+  #  restart: always
+  #neo4j:
+  #  image: neo4j:latest
+  #  ports:
+  #    - "7474:7474"
+  #    - "7687:7687"
+  #  volumes:
+  #    - ../neo4j/data:/data
+  #    - ../neo4j/logs:/logs
+  #    - ../neo4j/import/:/var/lib/neo4j/import
+  #    - ../neo4j/plugins:/plugins
+  #  environment:
+  #    - NEO4J_AUTH=neo4j/test
+  solr:
+    image: solr:7.5
+    ports:
+      - "8984:8983"
+    volumes:
+      - core3:/opt/solr/server/solr/core2
+  #rasa:
+  #  image: rasa/rasa:latest-full
+  #  ports:
+  #    - 5005:5005
+  #  volumes:
+  #    - ../src/rasa:/app
+  #  command:
+  #    - run
+volumes:
+  verwaltung40_d8_db_data:
+  core3:
