@@ -1,0 +1,7 @@
+person_network.content:
+    path: '/person-network/content'
+    defaults:
+        _controller: '\Drupal\person_network\Controller\PersonNetworkController::content'
+        _title: 'Person Network'
+    requirements:
+        _permission: 'access content'
