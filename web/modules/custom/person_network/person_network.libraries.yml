@@ -1,0 +1,9 @@
+person_network_graphic:
+    version: 1.x
+    js:
+      js/person_network.js: {}
+      js/d3.min.js: {}
+    dependencies:
+      - core/drupal
+      - core/jquery
+      - core/drupalSettings
