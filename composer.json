@@ -22,6 +22,7 @@
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
+        "drupal/devel": "^2.1",
         "drupal/geocoder": "^2.9",
         "drupal/geofield": "^1.8",
         "drupal/leaflet": "^1.27",
