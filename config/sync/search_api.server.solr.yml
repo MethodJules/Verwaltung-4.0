@@ -31,22 +31,21 @@ name: Solr
 description: ''
 backend: search_api_solr
 backend_config:
-  connector: standard
+  connector: basic_auth
   connector_config:
-    scheme: http
-    host: 192.168.64.100
-    port: 8983
-    path: /
-    core: verwaltung40
+    scheme: null
+    host: null
+    port: null
+    path: ''
+    core: null
     timeout: 5
     index_timeout: 5
     optimize_timeout: 10
-    finalize_timeout: 30
+    solr_version: null
+    http_method: null
+    username: null
+    password: null
     commit_within: 1000
-    solr_version: ''
-    http_method: AUTO
-    jmx: false
-    solr_install_dir: ../../..
   disabled_field_types: {  }
   disabled_caches: {  }
   disabled_request_handlers:
@@ -64,3 +63,4 @@ backend_config:
   environment: default
   optimize: false
   site_hash: false
+  finalize_timeout: 30

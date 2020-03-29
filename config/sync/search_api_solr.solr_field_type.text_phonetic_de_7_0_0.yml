@@ -1,7 +1,9 @@
 uuid: 8c011c9f-967f-4df7-b415-28590f6163de
 langcode: de
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - search_api_solr.solr_field_type.text_de_7_0_0
 _core:
   default_config_hash: A4o2qDDB_5bZOIrXrlvedoHy34PzHx9wIvcanzzAXKQ
 id: text_phonetic_de_7_0_0
