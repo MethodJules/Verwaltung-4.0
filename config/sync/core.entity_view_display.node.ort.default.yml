@@ -4,8 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.ort.body
+    - field.field.node.ort.field_adresse
+    - field.field.node.ort.field_location
     - node.type.ort
   module:
+    - address
+    - geofield
     - text
     - user
 id: node.ort.default
@@ -19,6 +23,22 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_adresse:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_location:
+    weight: 103
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    type: geofield_default
     region: content
   links:
     weight: 100

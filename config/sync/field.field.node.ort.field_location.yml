@@ -1,0 +1,40 @@
+uuid: 4013a769-6311-4c4a-af6a-2a009ab180c7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.ort
+  module:
+    - geocoder_field
+    - geofield
+third_party_settings:
+  geocoder_field:
+    method: source
+    weight: 0
+    geocode_field: field_adresse
+    reverse_geocode_field: ''
+    skip_not_empty_value: 0
+    disabled: false
+    hidden: false
+    plugins:
+      - openstreetmap
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: node.ort.field_location
+field_name: field_location
+entity_type: node
+bundle: ort
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield
