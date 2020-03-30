@@ -7,7 +7,7 @@ use Drupal\Core\Controller\ControllerBase;
 class PersonNetworkController extends ControllerBase {
     public function content() {
         $query = \Drupal::entityQuery('node')
-                ->condition('type', 'person');
+                ->condition('type', 'projekt');
         $nids = $query->execute();
         $node_storage = \Drupal::entityTypeManager()->getStorage('node');
 
@@ -15,12 +15,13 @@ class PersonNetworkController extends ControllerBase {
 
         $index = 0;
         foreach($nodes as $node) {
-            $graphdata['nodes'][] = ['name' => $node->title->value, 'type' => 'person'];
+
+            $graphdata['nodes'][] = ['name' => $node->title->value, 'type' => 'project'];
             $personIndex = $node->id();
-            foreach ($node->field_projekt as $reference){
+            foreach ($node->field_fachthema_projekt as $reference){
                 //$projects[] = $reference->target_id;
                 //s$projects[] = $reference->entity->title->value;
-                    $graphdata['nodes'][] = ['name' => $reference->entity->title->value, 'type' => 'project'];
+                    $graphdata['nodes'][] = ['name' => $reference->entity->title->value, 'type' => 'fachthema'];
                     $projectIndex = $reference->target_id;
                     $graphdata['edges'][] = [
                         //'source' => $personIndex,
@@ -28,7 +29,7 @@ class PersonNetworkController extends ControllerBase {
                         'source' => array_search($node->title->value, array_column($graphdata['nodes'], 'name')),
                         'target' => array_search($reference->entity->title->value, array_column($graphdata['nodes'], 'name'))
                     ];
-                    $graphdata['praedikate'][] = 'arbeitet an';
+                    $graphdata['praedikate'][] = '';
             }
         }
         //dsm($persons);
