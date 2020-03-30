@@ -45,7 +45,7 @@
             .enter()
             .append("line")
             .attr("id",function(d,i) {return 'edge'+i})
-            .attr('marker-end','url(#arrowhead)')
+            //.attr('marker-end','url(#arrowhead)')
             .style("stroke","#ccc")
             .style("pointer-events", "none");
 
@@ -102,6 +102,7 @@
             .style("pointer-events", "none")
             .text(function(d,i){return praedikate[i]});
 
+        /*
         svg.append('defs').append('marker')
             .attr({'id':'arrowhead',
                 'viewBox':'-0 -5 10 10',
@@ -116,7 +117,7 @@
             .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
             .attr('fill', '#ccc')
             .attr('stroke','#ccc');
-
+        */
 
         force.on("tick", function(){
 
