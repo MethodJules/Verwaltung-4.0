@@ -1,5 +1,13 @@
 version: '3'
 services:
+  reverse-proxy:
+    image: traefik:v2.2
+    command: --api.insecure=true --providers.docker
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
   verwaltung40_d8_db:
     image: mysql:5.7
     command: --max_allowed_packet=32505856 #Set max_allowed_packet to 256M
@@ -21,6 +29,8 @@ services:
     volumes:
       - ..:/app
     #network_mode: host
+    labels:
+      - "traefik.http.routers.verwaltung40_d8_drupal.rule=Host(`verwaltung.docker.localhost`)"
     restart: always
   #corenlp:
   #  image: nlpbox/corenlp
