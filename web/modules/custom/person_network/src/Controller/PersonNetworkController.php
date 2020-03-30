@@ -37,7 +37,7 @@ class PersonNetworkController extends ControllerBase {
         //dsm($projects);
         //dsm($graphdata);
 
-        $render_html = ['#markup' => '<h1>Person-Network</h1><div id="person_network_graphic"></div>'];
+        $render_html = ['#markup' => '<h1>Projekte und ihre Fachthemen</h1><div id="person_network_graphic"></div>'];
         $render_html['#attached']['library'][] = 'person_network/person_network_graphic';
         //$render_html['#attached']['drupalSettings']['baseUrl'] = $base_url;
         $render_html['#attached']['drupalSettings']['person_network']['graphdata'] = $graphdata;
