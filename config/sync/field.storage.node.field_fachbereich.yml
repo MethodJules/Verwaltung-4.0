@@ -1,15 +1,16 @@
-uuid: 63e6f65c-92f8-4b63-bee2-044e6c87d9c1
+uuid: 1e30b303-bd9e-4428-86ea-f7e788e04b63
 langcode: de
 status: true
 dependencies:
   module:
     - node
-id: node.field_ort_projekt
-field_name: field_ort_projekt
+    - taxonomy
+id: node.field_fachbereich
+field_name: field_fachbereich
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1
