@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.person.field_digitalisierungswissen
     - field.field.node.person.field_email_adresse
     - field.field.node.person.field_fachthema
+    - field.field.node.person.field_profilbild
     - field.field.node.person.field_projekt
     - field.field.node.person.field_rolle
     - field.field.node.person.field_skills
@@ -31,6 +32,7 @@ hidden:
   field_digitalisierungswissen: true
   field_email_adresse: true
   field_fachthema: true
+  field_profilbild: true
   field_projekt: true
   field_rolle: true
   field_skills: true

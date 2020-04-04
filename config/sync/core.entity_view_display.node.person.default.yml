@@ -7,13 +7,16 @@ dependencies:
     - field.field.node.person.field_digitalisierungswissen
     - field.field.node.person.field_email_adresse
     - field.field.node.person.field_fachthema
+    - field.field.node.person.field_profilbild
     - field.field.node.person.field_projekt
     - field.field.node.person.field_rolle
     - field.field.node.person.field_skills
     - field.field.node.person.field_telefonnummer
     - field.field.node.person.field_verfuegbarkeit_person
+    - image.style.medium
     - node.type.person
   module:
+    - image
     - user
 id: node.person.default
 targetEntityType: node
@@ -21,7 +24,7 @@ bundle: person
 mode: default
 content:
   field_aufgaben:
-    weight: 105
+    weight: 6
     label: above
     settings:
       link: true
@@ -29,7 +32,7 @@ content:
     type: entity_reference_label
     region: content
   field_digitalisierungswissen:
-    weight: 108
+    weight: 9
     label: above
     settings:
       link: true
@@ -37,22 +40,31 @@ content:
     type: entity_reference_label
     region: content
   field_email_adresse:
-    weight: 103
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_fachthema:
-    weight: 106
+    weight: 7
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_profilbild:
+    weight: 1
+    label: above
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   field_projekt:
-    weight: 107
+    weight: 8
     label: above
     settings:
       link: true
@@ -61,7 +73,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_rolle:
-    weight: 110
+    weight: 10
     label: above
     settings:
       link: true
@@ -69,7 +81,7 @@ content:
     type: entity_reference_label
     region: content
   field_skills:
-    weight: 104
+    weight: 5
     label: above
     settings:
       link: true
@@ -77,7 +89,7 @@ content:
     type: entity_reference_label
     region: content
   field_telefonnummer:
-    weight: 102
+    weight: 2
     label: above
     settings:
       link_to_entity: false
@@ -85,7 +97,7 @@ content:
     type: string
     region: content
   field_verfuegbarkeit_person:
-    weight: 109
+    weight: 4
     label: above
     settings:
       link_to_entity: false
@@ -93,7 +105,7 @@ content:
     type: string
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

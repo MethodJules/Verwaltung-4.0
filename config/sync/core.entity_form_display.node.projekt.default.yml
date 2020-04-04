@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.projekt.field_beschreibung_projekt
     - field.field.node.projekt.field_fachthema_projekt
     - field.field.node.projekt.field_kommunen
+    - field.field.node.projekt.field_ort_projekt
     - field.field.node.projekt.field_projektart
     - field.field.node.projekt.field_termine
     - field.field.node.projekt.field_unterlagen
@@ -69,6 +70,16 @@ content:
     region: content
   field_kommunen:
     weight: 34
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_ort_projekt:
+    weight: 35
     settings:
       match_operator: CONTAINS
       match_limit: 10

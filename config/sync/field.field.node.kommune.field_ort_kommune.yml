@@ -1,0 +1,28 @@
+uuid: 0f58548c-3513-46af-83a4-8a03fd0de09f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ort_kommune
+    - node.type.kommune
+    - node.type.ort
+id: node.kommune.field_ort_kommune
+field_name: field_ort_kommune
+entity_type: node
+bundle: kommune
+label: Ort
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ort: ort
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

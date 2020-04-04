@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.projekt.field_beschreibung_projekt
     - field.field.node.projekt.field_fachthema_projekt
     - field.field.node.projekt.field_kommunen
+    - field.field.node.projekt.field_ort_projekt
     - field.field.node.projekt.field_projektart
     - field.field.node.projekt.field_termine
     - field.field.node.projekt.field_unterlagen
@@ -41,6 +42,7 @@ hidden:
   field_beschreibung_projekt: true
   field_fachthema_projekt: true
   field_kommunen: true
+  field_ort_projekt: true
   field_projektart: true
   field_termine: true
   field_unterlagen: true

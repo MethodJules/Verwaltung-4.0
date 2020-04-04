@@ -1,0 +1,28 @@
+uuid: f5288e8f-4f60-40ac-8912-cc6bbe41e26b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ort_projekt
+    - node.type.ort
+    - node.type.projekt
+id: node.projekt.field_ort_projekt
+field_name: field_ort_projekt
+entity_type: node
+bundle: projekt
+label: Ort
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ort: ort
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

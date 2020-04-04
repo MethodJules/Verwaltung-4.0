@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.fachthema.body
     - field.field.node.fachthema.field_bericht
     - field.field.node.fachthema.field_excel_tabelle
-    - field.field.node.fachthema.field_fachbereich
     - field.field.node.fachthema.field_taetigkeitsbeschreibung
     - field.field.node.fachthema.field_vordrucke
     - node.type.fachthema
@@ -48,16 +47,6 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
-    region: content
-  field_fachbereich:
-    weight: 127
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   field_taetigkeitsbeschreibung:
     weight: 123

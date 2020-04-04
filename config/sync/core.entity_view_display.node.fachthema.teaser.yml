@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.fachthema.body
     - field.field.node.fachthema.field_bericht
     - field.field.node.fachthema.field_excel_tabelle
-    - field.field.node.fachthema.field_fachbereich
     - field.field.node.fachthema.field_taetigkeitsbeschreibung
     - field.field.node.fachthema.field_vordrucke
     - node.type.fachthema
@@ -35,7 +34,6 @@ content:
 hidden:
   field_bericht: true
   field_excel_tabelle: true
-  field_fachbereich: true
   field_taetigkeitsbeschreibung: true
   field_vordrucke: true
   langcode: true

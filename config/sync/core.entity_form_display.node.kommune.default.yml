@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.kommune.field_fachthema2
     - field.field.node.kommune.field_kommunenwappen
     - field.field.node.kommune.field_organigramm
+    - field.field.node.kommune.field_ort_kommune
     - field.field.node.kommune.field_person
     - image.style.thumbnail
     - node.type.kommune
@@ -70,6 +71,16 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_ort_kommune:
+    weight: 32
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_person:
     weight: 28

@@ -9,7 +9,9 @@ dependencies:
     - field.field.node.kommune.field_fachthema2
     - field.field.node.kommune.field_kommunenwappen
     - field.field.node.kommune.field_organigramm
+    - field.field.node.kommune.field_ort_kommune
     - field.field.node.kommune.field_person
+    - image.style.thumbnail
     - node.type.kommune
   module:
     - file
@@ -22,14 +24,14 @@ bundle: kommune
 mode: default
 content:
   field_beschreibung:
-    weight: 2
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_externe_partner:
-    weight: 5
+    weight: 6
     label: above
     settings:
       link: true
@@ -37,7 +39,7 @@ content:
     type: entity_reference_label
     region: content
   field_fachthema2:
-    weight: 3
+    weight: 4
     label: above
     settings:
       link: true
@@ -48,21 +50,29 @@ content:
     weight: 0
     label: above
     settings:
-      image_style: ''
+      image_style: thumbnail
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_organigramm:
-    weight: 6
+    weight: 7
     label: above
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
     region: content
+  field_ort_kommune:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_person:
-    weight: 4
+    weight: 5
     label: above
     settings:
       link: true
@@ -70,7 +80,7 @@ content:
     type: entity_reference_label
     region: content
   links:
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }

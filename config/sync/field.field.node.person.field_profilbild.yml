@@ -1,17 +1,17 @@
-uuid: af45c0f0-37f2-45bd-b4c7-eb7c7b0d446a
+uuid: e462cb0a-5623-4b87-85cf-791af86e0724
 langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.node.field_kommunenwappen
-    - node.type.kommune
+    - field.storage.node.field_profilbild
+    - node.type.person
   module:
     - image
-id: node.kommune.field_kommunenwappen
-field_name: field_kommunenwappen
+id: node.person.field_profilbild
+field_name: field_profilbild
 entity_type: node
-bundle: kommune
-label: Kommunenwappen
+bundle: person
+label: Profilbild
 description: ''
 required: false
 translatable: false
@@ -21,7 +21,7 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: 300x300
+  max_resolution: ''
   min_resolution: ''
   alt_field: true
   alt_field_required: true

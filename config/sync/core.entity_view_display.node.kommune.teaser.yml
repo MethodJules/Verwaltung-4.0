@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.kommune.field_fachthema2
     - field.field.node.kommune.field_kommunenwappen
     - field.field.node.kommune.field_organigramm
+    - field.field.node.kommune.field_ort_kommune
     - field.field.node.kommune.field_person
     - node.type.kommune
   module:
@@ -39,6 +40,7 @@ hidden:
   field_fachthema2: true
   field_kommunenwappen: true
   field_organigramm: true
+  field_ort_kommune: true
   field_person: true
   langcode: true
   search_api_excerpt: true

@@ -7,13 +7,16 @@ dependencies:
     - field.field.node.person.field_digitalisierungswissen
     - field.field.node.person.field_email_adresse
     - field.field.node.person.field_fachthema
+    - field.field.node.person.field_profilbild
     - field.field.node.person.field_projekt
     - field.field.node.person.field_rolle
     - field.field.node.person.field_skills
     - field.field.node.person.field_telefonnummer
     - field.field.node.person.field_verfuegbarkeit_person
+    - image.style.thumbnail
     - node.type.person
   module:
+    - image
     - path
 id: node.person.default
 targetEntityType: node
@@ -63,6 +66,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_profilbild:
+    weight: 32
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_projekt:
     weight: 28
